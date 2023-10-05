@@ -1,5 +1,8 @@
 package dev.westernpine;
 
+import dev.westernpine.algorithms.BigONotation;
+import dev.westernpine.algorithms.BinarySearch;
+import dev.westernpine.algorithms.LinearSearch;
 import dev.westernpine.datastructures.*;
 
 public class Main {
@@ -17,13 +20,21 @@ public class Main {
          * Tutorial followed: https://www.youtube.com/watch?v=CBYHwZcbD-s
          */
 
+        // Some List/Array based Data Structures.
         StackDS.main();
         QueueDS.main();
         PriorityQueueDS.main();
         LinkedListDS.main();
         DynamicArrayDS.main();
 
-        System.out.println("Complete.");
+        BigONotation.main();
+
+        LinearSearch.main(); // O(n)
+        BinarySearch.main(); // O(log n)
+
+
+        System.out.println("Learning Complete.");
+        // Small side note... I feel like this is such a great thing to print out after all of this! :D
     }
 
 }
