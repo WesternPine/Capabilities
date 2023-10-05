@@ -28,7 +28,7 @@ public class BinarySearch {
         int startIndex = 0;
         int maxIndex = array.length-1;
         int index = maxIndex/2;
-        int result = -1;
+        int result;
 
         while(true) {
             result = comparator.compare(value, array[index]);
