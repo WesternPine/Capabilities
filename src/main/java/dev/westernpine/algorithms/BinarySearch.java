@@ -19,29 +19,29 @@ public class BinarySearch {
     public static void main() {
         Integer[] array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12};
 
-        assert search(array, 9, Integer::compareTo) == 9;
-        assert search(array, 12, Integer::compareTo) == 10;
-        assert search(array, 10, Integer::compareTo) == -1;
+        assert search(array, 9) == 9;
+        assert search(array, 12) == 10;
+        assert search(array, 10) == -1;
     }
 
-    public static <T> int search(T[] array, T value, Comparator<T> comparator) {
+    public static <T extends Comparable<T>> int search(T[] array, T value) {
         int startIndex = 0;
         int maxIndex = array.length-1;
         int index = maxIndex/2;
         int result;
 
         while(true) {
-            result = comparator.compare(value, array[index]);
+            result = value.compareTo(array[index]);
 
             if(result == 0)
                 return index;
 
             // This means there's 2 possible checks left. We're either the start or max, or we aren't here.
             if(maxIndex - startIndex <= 1) {
-                if(comparator.compare(value, array[startIndex]) == 0)
+                if(value.compareTo(array[startIndex]) == 0)
                     return startIndex;
 
-                if(comparator.compare(value, array[maxIndex]) == 0)
+                if(value.compareTo(array[maxIndex]) == 0)
                     return maxIndex;
 
                 return -1;
