@@ -1,9 +1,14 @@
 package dev.westernpine;
 
-import dev.westernpine.algorithms.BigONotation;
-import dev.westernpine.algorithms.BinarySearch;
-import dev.westernpine.algorithms.LinearSearch;
+import dev.westernpine.algorithms.*;
+import dev.westernpine.algorithms.misc.Recursion;
+import dev.westernpine.algorithms.search.BinarySearch;
+import dev.westernpine.algorithms.search.InterpolationSearch;
+import dev.westernpine.algorithms.search.LinearSearch;
+import dev.westernpine.algorithms.sort.*;
 import dev.westernpine.datastructures.*;
+
+import java.util.Arrays;
 
 public class Main {
 
@@ -31,6 +36,19 @@ public class Main {
 
         LinearSearch.main(); // O(n)
         BinarySearch.main(); // O(log n)
+        InterpolationSearch.main(); // O(log(log(n))) - O(n)
+
+        BubbleSort.main(); // O(n^2) - ok
+        SelectionSort.main(); // O(n^2) - good
+        InsertionSort.main(); // O(n^2) - better
+        // TODO: Dual-Pivot Quicksort // - BEST
+
+        Recursion.main();
+
+        MergeSort.main(); // Time = O(n log(n)) Space = O(n)
+        QuickSort.main(); // Time:  O(n log(n)) Space: O(log(n)) (for recursion memory consumption)
+
+        // TIME FOR THE FUN STUFF! :D
 
 
         System.out.println("Learning Complete.");

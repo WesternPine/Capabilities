@@ -1,4 +1,4 @@
-package dev.westernpine.algorithms;
+package dev.westernpine.algorithms.search;
 
 public class LinearSearch {
 
