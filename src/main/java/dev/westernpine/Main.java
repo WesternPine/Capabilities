@@ -49,6 +49,8 @@ public class Main {
         QuickSort.main(); // Time:  O(n log(n)) Space: O(log(n)) (for recursion memory consumption)
 
         // TIME FOR THE FUN STUFF! :D
+        HashTableDS.main(); // O(1)
+        GraphDS.main();
 
 
         System.out.println("Learning Complete.");
