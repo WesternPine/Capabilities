@@ -3,12 +3,16 @@ package dev.westernpine.datastructures.Custom.Graph;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class GraphList {
+public class GraphList implements IGraph {
 
     ArrayList<LinkedList<Node>> aList;
 
     public GraphList() {
         this.aList = new ArrayList<>();
+    }
+
+    public int size() {
+        return aList.size();
     }
 
     public void addNode(Node node) {

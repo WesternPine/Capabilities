@@ -2,9 +2,7 @@ package dev.westernpine;
 
 import dev.westernpine.algorithms.*;
 import dev.westernpine.algorithms.misc.Recursion;
-import dev.westernpine.algorithms.search.BinarySearch;
-import dev.westernpine.algorithms.search.InterpolationSearch;
-import dev.westernpine.algorithms.search.LinearSearch;
+import dev.westernpine.algorithms.search.*;
 import dev.westernpine.algorithms.sort.*;
 import dev.westernpine.datastructures.*;
 
@@ -51,6 +49,9 @@ public class Main {
         // TIME FOR THE FUN STUFF! :D
         HashTableDS.main(); // O(1)
         GraphDS.main();
+
+        DepthFirstSearch.main(); // Traverses a graph one direction at a time, utilizes recursion, and is better when destination is far from the start.
+        BreadthFirstSearch.main(); // Traverses a graph by level, utilizes loops, and is better for closer destinations.
 
 
         System.out.println("Learning Complete.");
