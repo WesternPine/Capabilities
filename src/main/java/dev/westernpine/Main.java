@@ -5,6 +5,7 @@ import dev.westernpine.algorithms.misc.Recursion;
 import dev.westernpine.algorithms.search.*;
 import dev.westernpine.algorithms.sort.*;
 import dev.westernpine.datastructures.*;
+import dev.westernpine.datastructures.Custom.Tree.BST;
 
 import java.util.Arrays;
 
@@ -52,6 +53,8 @@ public class Main {
 
         DepthFirstSearch.main(); // Traverses a graph one direction at a time, utilizes recursion, and is better when destination is far from the start.
         BreadthFirstSearch.main(); // Traverses a graph by level, utilizes loops, and is better for closer destinations.
+
+        BST.main();
 
 
         System.out.println("Learning Complete.");
